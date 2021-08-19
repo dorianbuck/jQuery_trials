@@ -18,15 +18,15 @@
     </style>
   </head>
   <body>
-    <div class="box"></div>
-    <button>Click me</button>
+    <div class="box blue"></div>
+    <button class="toggle-blue">toggle me</button>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        
-        $("button").on("click", () => {
-          $(".box").addClass("blue");
+        const $box = $(".box");
+        $(".toggle-blue").on("click", () => {
+          $box.toggleClass("blue");
         });
       });
     </script>
