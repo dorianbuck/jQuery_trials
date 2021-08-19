@@ -5,24 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jquery 101</title>
+
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+      }
+      .blue {
+        background-color: blue;
+      }
+    </style>
   </head>
   <body>
-    <form>
-      <input type="text" name="name" placeholder="Your name" />
-      <button type="submit">Submit this form</button>
-    </form>
+    <div class="box"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        $("form").on("submit", function (event) {
-          event.preventDefault();
-          console.log("this form was not submitted");
-        });
-        // $("button").on("click", function (event) {
-        //   event.preventDefault();
-        //   console.log("Button is rendered useless");
-        // });
+        setTimeout(function () {
+          $(".box").addClass("blue");
+        }, 2000);
       });
     </script>
   </body>
