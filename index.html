@@ -7,17 +7,14 @@
     <title>Jquery 101</title>
   </head>
   <body>
-    <section>
-      Put some HTML code in here
-
-      <input type="text" value="${}" />
-    </section>
+    <h1>Some text here</h1>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        const text = $("section").text();
-        console.log(text)
+        $("h1")
+          .prepend("<i>This is Italics</i>2")
+          .append("<u>This is undelerline</u>2");
       });
     </script>
   </body>
