@@ -19,13 +19,15 @@
   </head>
   <body>
     <div class="box"></div>
+    <button>Click me</button>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        setTimeout(function () {
+        
+        $("button").on("click", () => {
           $(".box").addClass("blue");
-        }, 2000);
+        });
       });
     </script>
   </body>
