@@ -7,7 +7,9 @@
     <title>Jquery 101</title>
   </head>
   <body>
-    <button>Click Me!</button>
+
+    <div class="" id="clickHere">Clixxt me</div>
+    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
@@ -17,6 +19,10 @@
           $(document).on('click', 'button', () => {
             console.log('333333')
           })
+
+            const $parent = $('#clickHere')
+            $parent.html('<button> Click me dynamic button</button>')
+
 
         
       });
