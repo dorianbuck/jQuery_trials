@@ -7,24 +7,22 @@
     <title>Jquery 101</title>
   </head>
   <body>
+    <form>
+      <input type="text" name="name" placeholder="Your name" />
+      <button type="submit">Submit this form</button>
+    </form>
 
-    <div class="" id="clickHere">Clixxt me</div>
-    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        // $('button').click( () => {
-        //   console.log('i am xclicked')
-
-          $(document).on('click', 'button', () => {
-            console.log('333333')
-          })
-
-            const $parent = $('#clickHere')
-            $parent.html('<button> Click me dynamic button</button>')
-
-
-        
+        $("form").on("submit", function (event) {
+          event.preventDefault();
+          console.log("this form was not submitted");
+        });
+        // $("button").on("click", function (event) {
+        //   event.preventDefault();
+        //   console.log("Button is rendered useless");
+        // });
       });
     </script>
   </body>
