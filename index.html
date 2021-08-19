@@ -7,14 +7,18 @@
     <title>Jquery 101</title>
   </head>
   <body>
-    <div id="target">Add HTML before and after this</div>
-
+    <button>Click Me!</button>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        $("div#target").before('<h3>Herro Wold</h3>')
-        $("div#target").after('<p>This is a paragraph</p>')
-          
+        // $('button').click( () => {
+        //   console.log('i am xclicked')
+
+          $(document).on('click', 'button', () => {
+            console.log('333333')
+          })
+
+        
       });
     </script>
   </body>
