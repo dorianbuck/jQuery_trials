@@ -7,14 +7,14 @@
     <title>Jquery 101</title>
   </head>
   <body>
-    <h1>Some text here</h1>
+    <div id="target">Add HTML before and after this</div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        $("h1")
-          .prepend("<i>This is Italics</i>2")
-          .append("<u>This is undelerline</u>2");
+        $("div#target").before('<h3>Herro Wold</h3>')
+        $("div#target").after('<p>This is a paragraph</p>')
+          
       });
     </script>
   </body>
