@@ -7,15 +7,17 @@
     <title>Jquery 101</title>
   </head>
   <body>
-    <div id="customId"></div>
+    <section>
+      Put some HTML code in here
+
+      <input type="text" value="${}" />
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        $("#customId").html(
-          '<h1> Hello world! <span class="custom-class">Span text</span></h1>'
-          
-        );$('span').text('changed')
+        const text = $("section").text();
+        console.log(text)
       });
     </script>
   </body>
