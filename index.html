@@ -26,7 +26,10 @@
       $(document).ready(function () {
         const $box = $(".box");
         $("button").on("click", function () {
-          $box.fadeToggle(2600);
+          $box.animate ({
+            opacity: 0.5,
+            width: '500px',
+          }, 4000);
         });
       });
     </script>
